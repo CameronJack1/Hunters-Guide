@@ -1,0 +1,86 @@
+# User Manual: Hunter's Guide Application
+
+## Introduction
+The **Hunter's Guide** application is a user-friendly tool designed to assist hunters in planning and executing their trips effectively. This guide covers the app's features, functionality, and instructions for use.
+
+---
+
+## Features Overview
+
+1. **Season Schedules**
+   - View detailed hunting season schedules for various regions and game types.
+
+2. **Tracking & Trapping Tips**
+   - Access expert tips and techniques for tracking and trapping animals effectively.
+
+3. **Gear Checklist**
+   - Organize and track your hunting gear to ensure nothing is forgotten.
+
+4. **Exit**
+   - Close the application safely.
+
+---
+
+## Getting Started
+
+### Installation
+1. Ensure you have Python installed on your system.
+2. Install required dependencies by running:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the main application:
+   ```bash
+   python main.py
+   ```
+
+### Launching the App
+1. Open the application by running the command above.
+2. The home screen will display the app's title and buttons for navigation.
+
+---
+
+## Detailed Instructions
+
+### 1. Season Schedules
+- Click the **"Season Schedules"** button.
+- A new window will display hunting season schedules. Navigate through the options to find your region or game of interest.
+
+### 2. Tracking & Trapping Tips
+- Select the **"Tracking & Trapping Tips"** button.
+- Read expert tips on how to track and trap animals, with specific techniques for different terrains and species.
+
+### 3. Gear Checklist
+- Press the **"Gear Checklist"** button.
+- View a preloaded checklist of essential hunting gear.
+- Add or remove items as needed to personalize your checklist.
+
+### 4. Exit
+- To close the app, simply click the **"Exit"** button on the home screen.
+
+---
+
+## Troubleshooting
+
+- **App Won't Start:** Ensure all dependencies are installed and that you are running the correct Python version.
+- **Buttons Not Responding:** Restart the application.
+- **Missing Data:** Check the corresponding `.py` files (e.g., `seasons.py`, `tracking_tips.py`) for completeness.
+
+---
+
+## Contact and Support
+For support or feedback, please contact:
+- **Email:** support@huntersguide.com
+- **Website:** [www.huntersguide.com](http://www.huntersguide.com)
+
+---
+
+## Appendix
+
+### Dependencies
+- Python 3.7+
+- Tkinter
+
+### License
+Hunter's Guide is licensed under [Your License Here].
+

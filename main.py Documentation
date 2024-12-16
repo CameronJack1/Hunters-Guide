@@ -1,0 +1,80 @@
+"""
+main.py - Entry point for the Hunter's Guide Application.
+
+This module initializes the GUI and provides navigation to the app's key features:
+1. Season Schedules
+2. Tracking & Trapping Tips
+3. Gear Checklist
+4. Application Exit
+
+Author: [Your Name]
+Date: [Date]
+Dependencies:
+    - tkinter: For building the graphical user interface.
+    - seasons: Module to handle season schedules.
+    - tracking_tips: Module to display tracking and trapping tips.
+    - gear_checklist: Module to manage the gear checklist.
+"""
+
+import tkinter as tk  # Tkinter for GUI components
+from tkinter import messagebox  # For message dialogs
+from seasons import SeasonsWindow  # Importing season schedules window
+from tracking_tips import TrackingTipsWindow  # Importing tracking tips window
+from gear_checklist import GearChecklistWindow  # Importing gear checklist window
+
+class MainApp:
+    """
+    MainApp class manages the GUI for the Hunter's Guide application.
+
+    Attributes:
+        root (tk.Tk): The main tkinter window.
+    """
+
+    def __init__(self, root):
+        """
+        Initializes the MainApp class with a tkinter root window.
+
+        Args:
+            root (tk.Tk): The main application window.
+        """
+        self.root = root
+        self.root.title("Hunter's Guide")  # Set the title of the app window
+        
+        # Home Page Widgets
+        self.home_label = tk.Label(root, text="Welcome to Hunter's Guide", font=("Helvetica", 16))
+        self.home_label.pack(pady=20)  # Add spacing around the label
+        
+        # Buttons for navigation
+        self.seasons_button = tk.Button(root, text="Season Schedules", command=self.open_seasons_window)
+        self.seasons_button.pack(pady=10)  # Button to open the Season Schedules window
+
+        self.tips_button = tk.Button(root, text="Tracking & Trapping Tips", command=self.open_tips_window)
+        self.tips_button.pack(pady=10)  # Button to open the Tracking Tips window
+
+        self.checklist_button = tk.Button(root, text="Gear Checklist", command=self.open_checklist_window)
+        self.checklist_button.pack(pady=10)  # Button to open the Gear Checklist window
+
+        self.exit_button = tk.Button(root, text="Exit", command=self.exit_app)
+        self.exit_button.pack(pady=10)  # Button to exit the application
+
+    def open_seasons_window(self):
+        """Opens the Season Schedules window."""
+        SeasonsWindow(self.root)
+
+    def open_tips_window(self):
+        """Opens the Tracking & Trapping Tips window."""
+        TrackingTipsWindow(self.root)
+
+    def open_checklist_window(self):
+        """Opens the Gear Checklist window."""
+        GearChecklistWindow(self.root)
+
+    def exit_app(self):
+        """Exits the application after confirmation."""
+        if messagebox.askokcancel("Quit", "Do you want to exit the application?"):
+            self.root.destroy()  # Destroy the tkinter root window
+
+if __name__ == "__main__":
+    root = tk.Tk()  # Create the main tkinter window
+    app = MainApp(root)  # Initialize the MainApp class
+    root.mainloop()  # Start the tkinter main loop
